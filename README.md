@@ -25,6 +25,8 @@ npm run setup     # crée les .env (secrets générés), installe les dépendanc
 npm run dev       # lance Strapi (1337) et Next.js (3000)
 ```
 
+Au tout premier lancement, Strapi construit son interface d'administration (environ 20 secondes) : si le site affiche « momentanément indisponible », attendre la ligne `Strapi started successfully` puis cliquer sur « Réessayer ».
+
 | | URL | Accès |
 |---|---|---|
 | Site | http://localhost:3000 | visiteur, ou membre via « Se connecter » |

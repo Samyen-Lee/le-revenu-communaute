@@ -51,9 +51,10 @@ fromExample('frontend/.env.example', 'frontend/.env.local', (c) =>
 fromExample('.env.example', '.env', withSecrets);
 
 console.log('\n2. Dépendances');
-for (const app of ['backend', 'frontend']) {
-  console.log(`• npm install (${app})…`);
-  execSync('npm install', { cwd: path.join(root, app), stdio: 'inherit' });
+// La racine porte `concurrently`, utilisé par `npm run dev`.
+for (const dir of ['.', 'backend', 'frontend']) {
+  console.log(`• npm install (${dir === '.' ? 'racine' : dir})…`);
+  execSync('npm install', { cwd: path.join(root, dir), stdio: 'inherit' });
 }
 
 if (!usePostgres) {
