@@ -1,0 +1,48 @@
+{
+  "name": "le-revenu-communaute-backend",
+  "version": "0.1.0",
+  "private": true,
+  "description": "API Strapi v5 de la Communauté Le Revenu",
+  "scripts": {
+    "build": "strapi build",
+    "develop": "strapi develop",
+    "dev": "strapi develop",
+    "start": "strapi start",
+    "strapi": "strapi",
+    "console": "strapi console",
+    "seed": "node scripts/seed.js",
+    "seed:reset": "node scripts/seed.js --reset",
+    "test": "jest",
+    "types:check": "tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "@strapi/database": "5.59.0",
+    "@strapi/plugin-users-permissions": "5.59.0",
+    "@strapi/strapi": "5.59.0",
+    "better-sqlite3": "12.11.1",
+    "pg": "^8.23.1",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^6.30.3",
+    "styled-components": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/supertest": "^7.2.1",
+    "jest": "^30.5.2",
+    "supertest": "^7.3.1",
+    "ts-jest": "^29.4.15",
+    "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=20.0.0 <=26.x.x",
+    "npm": ">=6.0.0"
+  },
+  "strapi": {
+    "uuid": "f7d62320-591b-4d7b-98ae-c3fbb29e7deb",
+    "installId": "4d79f23073607de5d11d903d1fbed18103f387d9214b7adb90dbdf0bd0a503b3"
+  }
+}

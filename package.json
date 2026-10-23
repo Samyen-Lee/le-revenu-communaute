@@ -1,0 +1,19 @@
+{
+  "name": "le-revenu-communaute",
+  "private": true,
+  "description": "Communauté Le Revenu — Next.js (App Router) + Strapi v5",
+  "scripts": {
+    "setup": "node scripts/setup.mjs",
+    "dev": "concurrently -n strapi,next -c red,blue \"npm --prefix backend run develop\" \"npm --prefix frontend run dev\"",
+    "test": "npm --prefix backend test && npm --prefix frontend test",
+    "test:e2e": "npm --prefix frontend run test:e2e",
+    "lint": "npm --prefix frontend run lint && npm --prefix backend run types:check",
+    "seed:reset": "npm --prefix backend run seed:reset"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  },
+  "engines": {
+    "node": ">=20 <=24"
+  }
+}

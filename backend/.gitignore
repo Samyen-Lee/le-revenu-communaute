@@ -1,0 +1,34 @@
+############################
+# OS / éditeurs
+############################
+.DS_Store
+Thumbs.db
+.idea
+.vscode
+*.swp
+
+############################
+# Logs
+############################
+*.log
+npm-debug.log*
+
+############################
+# Dépendances et builds
+############################
+node_modules
+dist
+build
+.cache
+.strapi
+.strapi-updater.json
+.strapi-cloud.json
+coverage
+
+############################
+# Environnement et données locales
+############################
+.env
+.tmp
+public/uploads/*
+!public/uploads/.gitkeep

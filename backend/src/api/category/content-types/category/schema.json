@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categories",
+  "info": {
+    "singularName": "category",
+    "pluralName": "categories",
+    "displayName": "Catégorie",
+    "description": "Espace thématique de la communauté (Bourse, Épargne, Impôts…)"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 60
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "maxLength": 300
+    },
+    "icon": {
+      "type": "enumeration",
+      "enum": [
+        "candles",
+        "globe",
+        "piggy",
+        "umbrella",
+        "building",
+        "receipt",
+        "armchair",
+        "family",
+        "gem",
+        "wallet",
+        "coffee",
+        "message"
+      ],
+      "default": "message",
+      "required": true
+    },
+    "color": {
+      "type": "string",
+      "regex": "^#[0-9a-fA-F]{6}$",
+      "default": "#8e8e93",
+      "required": true
+    },
+    "position": {
+      "type": "integer",
+      "default": 0,
+      "min": 0
+    },
+    "discussions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::discussion.discussion",
+      "mappedBy": "category"
+    }
+  }
+}
